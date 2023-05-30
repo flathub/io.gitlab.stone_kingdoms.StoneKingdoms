@@ -1,5 +1,5 @@
 {
-    "app-id": "io.gitlab.stone_kingdoms.StoneKingdoms",
+    "id": "io.gitlab.stone_kingdoms.StoneKingdoms",
     "runtime": "org.freedesktop.Platform",
     "runtime-version": "22.08",
     "sdk": "org.freedesktop.Sdk",
@@ -59,15 +59,15 @@
                 "cd game && zip -r ../stone-kingdoms.love .",
                 "install -Dm755 stone-kingdoms.love /app/bin/stone-kingdoms.love",
                 "install -Dm755 stone-kingdoms /app/bin/stone-kingdoms",
-                "install -Dm644 stone-kingdoms.desktop /app/share/applications/io.gitlab.stone_kingdoms.StoneKingdoms.desktop",
-                "install -Dm644 stone-kingdoms.metainfo.xml /app/share/metainfo/io.gitlab.stone_kingdoms.StoneKingdoms.metainfo.xml",
-                "install -Dm644 stone-kingdoms.png /app/share/icons/hicolor/256x256/apps/io.gitlab.stone_kingdoms.StoneKingdoms.png"
+                "install -Dm644 game/appstream/io.gitlab.stone_kingdoms.StoneKingdoms.desktop /app/share/applications/io.gitlab.stone_kingdoms.StoneKingdoms.desktop",
+                "install -Dm644 game/appstream/io.gitlab.stone_kingdoms.StoneKingdoms.metainfo.xml /app/share/metainfo/io.gitlab.stone_kingdoms.StoneKingdoms.metainfo.xml",
+                "install -Dm644 game/assets/other/icon.png /app/share/icons/hicolor/256x256/apps/io.gitlab.stone_kingdoms.StoneKingdoms.png"
             ],
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.com/stone-kingdoms/stone-kingdoms/-/archive/0.4.0/stone-kingdoms-0.4.0.zip",
-                    "sha256": "1aeb0a78b4266bfa3d00c6c7ce1d6a16a3d07518d1c3bcb983a94170a144cd44",
+                    "url": "https://gitlab.com/stone-kingdoms/stone-kingdoms/-/archive/0.5.0/stone-kingdoms-0.5.0.tar.gz",
+                    "sha256": "7d3766df3120e088cdf6183fedeb2075536962c6a862e01e9a2a6dadc28e188e",
                     "dest": "game"
                 },
                 {
@@ -76,18 +76,6 @@
                         "love /app/bin/stone-kingdoms.love"
                     ],
                     "dest-filename": "stone-kingdoms"
-                },
-                {
-                    "type": "file",
-                    "path": "stone-kingdoms.desktop"
-                },
-                {
-                    "type": "file",
-                    "path": "stone-kingdoms.metainfo.xml"
-                },
-                {
-                    "type": "file",
-                    "path": "stone-kingdoms.png"
                 }
             ]
         }
