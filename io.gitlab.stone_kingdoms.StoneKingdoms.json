@@ -8,6 +8,7 @@
         "--socket=fallback-x11",
         "--socket=wayland",
         "--socket=pulseaudio",
+        "--share=network",
         "--share=ipc",
         "--device=dri"
     ],
@@ -26,9 +27,9 @@
             ],
             "sources": [
                 {
-                    "type": "archive",
-                    "url": "https://luajit.org/download/LuaJIT-2.1.0-beta3.tar.gz",
-                    "sha256": "1ad2e34b111c802f9d0cdf019e986909123237a28c746b21295b63c9e785d9c3"
+                    "type": "git",
+                    "url": "https://github.com/LuaJIT/LuaJIT",
+                    "commit": "9cc2e42b17148036d7d9ef36ab7afe52df345163"
                 }
             ]
         },
@@ -47,8 +48,8 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://github.com/love2d/love/releases/download/11.4/love-11.4-linux-src.tar.gz",
-                    "sha256": "e32feecaf5f4f210242a4b5f26cdf9ce9014bfde18d51286f643bb7fe51f5369"
+                    "url": "https://github.com/love2d/love/releases/download/11.5/love-11.5-linux-src.tar.gz",
+                    "sha256": "066e0843f71aa9fd28b8eaf27d41abb74bfaef7556153ac2e3cf08eafc874c39"
                 }
             ]
         },
@@ -56,8 +57,7 @@
             "name": "stone-kingdoms",
             "buildsystem": "simple",
             "build-commands": [
-                "cd game && zip -r ../stone-kingdoms.love .",
-                "install -Dm755 stone-kingdoms.love /app/bin/stone-kingdoms.love",
+                "cp -r game /app/game",
                 "install -Dm755 stone-kingdoms /app/bin/stone-kingdoms",
                 "install -Dm644 game/appstream/io.gitlab.stone_kingdoms.StoneKingdoms.desktop /app/share/applications/io.gitlab.stone_kingdoms.StoneKingdoms.desktop",
                 "install -Dm644 game/appstream/io.gitlab.stone_kingdoms.StoneKingdoms.metainfo.xml /app/share/metainfo/io.gitlab.stone_kingdoms.StoneKingdoms.metainfo.xml",
@@ -66,14 +66,14 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.com/stone-kingdoms/stone-kingdoms/-/archive/0.5.0/stone-kingdoms-0.5.0.tar.gz",
-                    "sha256": "7d3766df3120e088cdf6183fedeb2075536962c6a862e01e9a2a6dadc28e188e",
+                    "url": "https://gitlab.com/stone-kingdoms/stone-kingdoms/-/archive/0.6.0/stone-kingdoms-0.6.0.tar.gz",
+                    "sha256": "e2ca2b3e6d238c3dcdbef8b3cbe3ed142b8320f994cf2b0da9350998c9be7efa",
                     "dest": "game"
                 },
                 {
                     "type": "script",
                     "commands": [
-                        "love /app/bin/stone-kingdoms.love"
+                        "love /app/game"
                     ],
                     "dest-filename": "stone-kingdoms"
                 }
