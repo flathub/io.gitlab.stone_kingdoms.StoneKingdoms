@@ -1,0 +1,12 @@
+diff --git a/appstream/io.gitlab.stone_kingdoms.StoneKingdoms.metainfo.xml b/appstream/io.gitlab.stone_kingdoms.StoneKingdoms.metainfo.xml
+index 837cdce..f44f38d 100644
+--- a/appstream/io.gitlab.stone_kingdoms.StoneKingdoms.metainfo.xml
++++ b/appstream/io.gitlab.stone_kingdoms.StoneKingdoms.metainfo.xml
+@@ -31,6 +31,7 @@
+   <url type="homepage">https://gitlab.com/stone-kingdoms/stone-kingdoms</url>
+   <url type="bugtracker">https://gitlab.com/stone-kingdoms/stone-kingdoms/issues</url>
+   <url type="help">https://discord.gg/PRh8SPZxEf</url>
++  <launchable type="desktop-id">io.gitlab.stone_kingdoms.StoneKingdoms.desktop</launchable>
+ 
+   <releases>
+     <release version="0.6.1" date="2024-03-03">

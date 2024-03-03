@@ -29,7 +29,7 @@
                 {
                     "type": "git",
                     "url": "https://github.com/LuaJIT/LuaJIT",
-                    "commit": "9cc2e42b17148036d7d9ef36ab7afe52df345163"
+                    "commit": "0d313b243194a0b8d2399d8b549ca5a0ff234db5"
                 }
             ]
         },
@@ -66,8 +66,13 @@
             "sources": [
                 {
                     "type": "archive",
-                    "url": "https://gitlab.com/stone-kingdoms/stone-kingdoms/-/archive/0.6.0/stone-kingdoms-0.6.0.tar.gz",
-                    "sha256": "e2ca2b3e6d238c3dcdbef8b3cbe3ed142b8320f994cf2b0da9350998c9be7efa",
+                    "url": "https://gitlab.com/stone-kingdoms/stone-kingdoms/-/archive/0.6.1/stone-kingdoms-0.6.1.tar.gz",
+                    "sha256": "d61dc679d8d69153d178f42b312752b64ca4a05f76ffc086340ef705ca99ecd3",
+                    "dest": "game"
+                },
+                {
+                    "type": "patch",
+                    "path": "./metainfo-launchable.patch",
                     "dest": "game"
                 },
                 {
