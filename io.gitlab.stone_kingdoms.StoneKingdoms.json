@@ -1,7 +1,7 @@
 {
     "id": "io.gitlab.stone_kingdoms.StoneKingdoms",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "23.08",
+    "runtime-version": "24.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "stone-kingdoms",
     "finish-args": [
@@ -19,20 +19,7 @@
         "*.a"
     ],
     "modules": [
-        {
-            "name": "luajit",
-            "no-autogen": true,
-            "make-install-args": [
-                "PREFIX=/app"
-            ],
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/LuaJIT/LuaJIT",
-                    "commit": "0d313b243194a0b8d2399d8b549ca5a0ff234db5"
-                }
-            ]
-        },
+        "shared-modules/luajit/luajit.json",
         {
             "name": "libmodplug",
             "sources": [
