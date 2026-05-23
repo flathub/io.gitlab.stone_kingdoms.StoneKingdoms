@@ -1,7 +1,7 @@
 {
     "id": "io.gitlab.stone_kingdoms.StoneKingdoms",
     "runtime": "org.freedesktop.Platform",
-    "runtime-version": "24.08",
+    "runtime-version": "25.08",
     "sdk": "org.freedesktop.Sdk",
     "command": "stone-kingdoms",
     "finish-args": [
@@ -15,6 +15,7 @@
     "cleanup": [
         "/include",
         "/lib/pkgconfig",
+        "/share/man",
         "*.la",
         "*.a"
     ],
@@ -46,9 +47,10 @@
             "build-commands": [
                 "cp -r game /app/game",
                 "install -Dm755 stone-kingdoms /app/bin/stone-kingdoms",
-                "install -Dm644 game/appstream/io.gitlab.stone_kingdoms.StoneKingdoms.desktop /app/share/applications/io.gitlab.stone_kingdoms.StoneKingdoms.desktop",
-                "install -Dm644 game/appstream/io.gitlab.stone_kingdoms.StoneKingdoms.metainfo.xml /app/share/metainfo/io.gitlab.stone_kingdoms.StoneKingdoms.metainfo.xml",
-                "install -Dm644 game/assets/other/icon.png /app/share/icons/hicolor/256x256/apps/io.gitlab.stone_kingdoms.StoneKingdoms.png"
+                "install -Dm644 game/appstream/${FLATPAK_ID}.desktop -t /app/share/applications/",
+                "install -Dm644 game/appstream/${FLATPAK_ID}.metainfo.xml -t /app/share/metainfo/",
+                "install -Dm644 game/assets/other/icon.png /app/share/icons/hicolor/256x256/apps/${FLATPAK_ID}.png",
+                "install -Dm644 game/LICENSE -t $FLATPAK_DEST/share/licenses/$FLATPAK_ID/stone-kingdoms/"
             ],
             "sources": [
                 {
